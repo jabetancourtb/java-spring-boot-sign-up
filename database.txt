@@ -1,0 +1,12 @@
+CREATE DATABASE db_sign_up;
+
+USE db_sign_up;
+
+CREATE TABLE users
+(
+	id SERIAL PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	email VARCHAR(100) NOT NULL UNIQUE,
+	encrypted_password VARCHAR(256) NOT NULL
+);
